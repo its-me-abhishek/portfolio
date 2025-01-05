@@ -46,11 +46,11 @@ hr {
   overflow: visible;
 }
 
-.icon {
+.techicon {
   transition: transform 0.3s ease, letter-spacing 0.3s ease;
 }
 
-.icon:hover {
+.techicon:hover {
   transform: scale(1.5);
   letter-spacing: 2px;
 }
