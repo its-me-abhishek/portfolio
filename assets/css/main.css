@@ -5051,29 +5051,42 @@ a img {
     width: 80%;
   }
 }
-
 .user-projects {
   margin: 20px auto;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow below */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.user-projects:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .user-projects img {
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .user-projects h5 {
   margin: 0;
+  font-weight: 600;
 }
 
 .user-projects li {
   color: #1488cc;
   font-size: 1.1rem;
+  list-style: none;
 }
 
 .user-projects p {
   margin-right: 5px;
+  color: #333;
 }
+
 
 @media only screen and (min-width: 550px) {
   .contents {
