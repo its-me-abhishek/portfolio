@@ -51,6 +51,15 @@ hr {
 }
 
 .techicon:hover {
+  transform: scale(1.5) rotate(360deg);
+  letter-spacing: 2px;
+}
+
+.techicon-project {
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.techicon-project:hover {
   transform: scale(1.5);
   letter-spacing: 2px;
 }
@@ -5009,7 +5018,7 @@ a img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .user p {
@@ -5095,6 +5104,17 @@ a img {
   .images-left img {
     float: left;
   }
+}
+
+.project {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-link {
@@ -5188,16 +5208,44 @@ a img {
 /* Animation class for headings */
 .animate-color {
   background: linear-gradient(
-        to right,
-        #00d5ff 20%,
-        #00affa 30%,
-        #0190cd 70%,
-        #0174bc 80%
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-    background-size: 500% auto;
-    animation: colorSlide 5s ease-in-out infinite alternate;
+    to right,
+    #00d5ff 20%,
+    #00affa 30%,
+    #0190cd 70%,
+    #0174bc 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  background-size: 500% auto;
+  animation: colorSlide 5s ease-in-out infinite alternate;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 120%; /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
